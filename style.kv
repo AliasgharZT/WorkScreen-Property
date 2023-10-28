@@ -1,0 +1,38 @@
+
+<Style>:
+    manager:mn
+    fake:fake 
+    back:bg  
+
+    MDScreenManager:
+        id:mn
+        MDScreen:   
+            name:'main'
+            MDScreen:
+                Image:
+                    source:'background.jpg'
+                    allow_stretch:True 
+                    keep_ratio:False
+            MDScreen:
+                MDFlatButton:
+                    text:'Start'
+                    md_bg_color:'blue'
+                    pos_hint: {'center_x':0.5,'center_y': 0.5}
+                    size_hint: 0.4, 0.2
+                    font_size:26
+                    on_press:root.change_screen()
+        MDScreen:
+            name:'fake'
+            MDScreen:
+                Image:
+                    id:bg  
+                    source:''
+                    allow_stretch:True
+                    keep_ratio:False
+            MDScreen:
+                MDLabel:
+                    id:fake 
+                    text:'0'
+                    halign:'center'
+                    font_size:52
+# //////////////////////////FINISH/////////////////////////////
